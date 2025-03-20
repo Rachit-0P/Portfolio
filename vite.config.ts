@@ -4,11 +4,14 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/Portfoliooo/", // Update the base path to match index.html
+  base: "/Portfoliooo/",
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
   server: {
-    // Remove the invalid mimeTypes property
-  }
+    mimeTypes: {
+      'application/javascript': ['js', 'ts', 'tsx'],
+      'text/css': ['css'],
+    },
+  },
 });
