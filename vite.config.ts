@@ -9,10 +9,5 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   server: {
-    mimeTypes: {
-      'application/javascript': ['js', 'ts', 'tsx'],
-      'text/javascript': ['js', 'ts', 'tsx'], // Add this line
-      'text/css': ['css'],
-    },
   },
 });
