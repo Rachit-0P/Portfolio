@@ -11,6 +11,7 @@ export default defineConfig({
   server: {
     mimeTypes: {
       'application/javascript': ['js', 'ts', 'tsx'],
+      'text/javascript': ['js', 'ts', 'tsx'], // Add this line
       'text/css': ['css'],
     },
   },
