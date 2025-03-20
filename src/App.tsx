@@ -9,14 +9,16 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-primary text-white">
-      <Navbar />
-      <Hero />
-      <Portfolio />
-      <Services />
-      <About />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen bg-gradient-to-b from-primary to-primary/95 text-white">
+      <div className="animate-gradient">
+        <Navbar />
+        <Hero />
+        <Portfolio />
+        <Services />
+        <About />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

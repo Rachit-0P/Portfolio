@@ -1,0 +1,16 @@
+/* ...existing code... */
+
+/* Remove existing red or green gradients */
+.heading {
+    /* ...existing code... */
+    background: linear-gradient(to right, #0000FF, #00FFFF); /* Blue gradient */
+    /* ...existing code... */
+}
+
+.text {
+    /* ...existing code... */
+    background: linear-gradient(to right, #0000FF, #00FFFF); /* Blue gradient */
+    /* ...existing code... */
+}
+
+/* ...existing code... */

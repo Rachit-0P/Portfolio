@@ -7,9 +7,9 @@ export default {
         primary: '#080808',
         secondary: '#121212',
         accent: {
-          cyan: '#00E5FF',
-          orange: '#FF4C29',
-          green: '#7CFC00'
+          cyan: '#00BFFF', // Updated to blue
+          orange: '#1E90FF', // Updated to blue
+          green: '#4682B4' // Updated to blue
         }
       },
       fontFamily: {

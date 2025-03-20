@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
@@ -18,8 +17,8 @@ const Hero = () => {
                 width: `${Math.random() * 300}px`,
                 height: `${Math.random() * 300}px`,
                 background: `radial-gradient(circle, ${
-                  Math.random() > 0.5 ? '#00E5FF' : '#7CFC00'
-                }22, transparent)`,
+                  Math.random() > 0.5 ? '#00E5FF' : '#4682B4'
+                }22, transparent)`, // Updated to blue
                 animation: `float ${5 + Math.random() * 5}s ease-in-out infinite`,
                 animationDelay: `${Math.random() * 5}s`
               }}
@@ -36,7 +35,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6"
         >
-          <span className="bg-gradient-to-r from-accent-cyan to-accent-green bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-accent-cyan to-accent-orange bg-clip-text text-transparent">
             Crafting Click-Worthy
           </span>
           <br />
