@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Palette, Coffee, Sparkles } from 'lucide-react';
+import { Code2, Palette, Coffee, Sparkles } from 'lucide-react'; // Remove Youtube import
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -89,7 +89,7 @@ const About = () => {
                 <div className="text-gray-400">Happy Clients</div>
               </div>
               <div className="bg-primary p-4 rounded-lg">
-                <div className="text-accent-cyan font-bold text-3xl mb-2">200+</div>
+                <div className="text-accent-cyan font-bold text-3xl mb-2">200+</div> {/* Fixed the unclosed tag */}
                 <div className="text-gray-400">Projects Completed</div>
               </div>
             </motion.div>

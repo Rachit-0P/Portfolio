@@ -18,19 +18,8 @@ const services: Service[] = [
     features: [
       "Custom Edits",
       "Boost CTR",
-      "Eye-Catching",
-      "Unlimited Revisions"
-    ]
-  },
-  {
-    icon: <Palette className="w-8 h-8 text-accent-cyan" />,
-    title: "YouTube Branding",
-    description: "Cohesive branding elements that make your channel instantly recognizable.",
-    features: [
-      "Logo Design",
-      "Channel Banner",
-      "Live Stream Templates",
-      "Video Intro/Outro"
+      "Unlimited Revisions",
+      "Logo & Banner for YT Channel"
     ]
   },
   {
@@ -176,7 +165,6 @@ const Services = () => {
                   <option value="thumbnail">Thumbnail Design</option>
                   <option value="video-edit">Video Editing</option>
                   <option value="social-media">Social Media Enhancement</option>
-                  <option value="youtube-branding">YouTube Branding</option>
                 </select>
               </div>
               <div>
