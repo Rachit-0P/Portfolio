@@ -16,10 +16,10 @@ const services: Service[] = [
     title: "Thumbnail Design",
     description: "Eye-catching thumbnails that drive clicks and engagement for your YouTube content.",
     features: [
-      "Custom illustrations",
-      "Text optimization",
-      "Color psychology",
-      "A/B testing options"
+      "Custom Edits",
+      "Boost CTR",
+      "Eye-Catching",
+      "Unlimited Revisions"
     ]
   },
   {
@@ -27,21 +27,32 @@ const services: Service[] = [
     title: "YouTube Branding",
     description: "Cohesive branding elements that make your channel instantly recognizable.",
     features: [
-      "Channel banner design",
-      "Profile picture design",
-      "End screen templates",
-      "Video intro/outro"
+      "Logo Design",
+      "Channel Banner",
+      "Live Stream Templates",
+      "Video Intro/Outro"
     ]
   },
   {
     icon: <Share2 className="w-8 h-8 text-accent-cyan" />,
-    title: "Social Media Graphics",
-    description: "Engaging visuals that boost your social media presence and engagement.",
+    title: "Video Editing",
+    description: "Professional video editing services to enhance your content.",
     features: [
-      "Post templates",
-      "Story highlights",
-      "Profile optimization",
-      "Content calendar design"
+      "YouTube Long Video",
+      "Reels",
+      "Ads",
+      "Highlight Clips"
+    ]
+  },
+  {
+    icon: <Share2 className="w-8 h-8 text-accent-cyan" />,
+    title: "Social Media Enhancement",
+    description: "Engaging visuals and strategies that boost your social media presence and engagement.",
+    features: [
+      "Social Media Post",
+      "Social Media Management",
+      "Boost Post",
+      "Page Enhancement"
     ]
   }
 ];
@@ -163,8 +174,9 @@ const Services = () => {
                 >
                   <option value="">Select a service</option>
                   <option value="thumbnail">Thumbnail Design</option>
-                  <option value="branding">YouTube Branding</option>
-                  <option value="social">Social Media Graphics</option>
+                  <option value="video-edit">Video Editing</option>
+                  <option value="social-media">Social Media Enhancement</option>
+                  <option value="youtube-branding">YouTube Branding</option>
                 </select>
               </div>
               <div>

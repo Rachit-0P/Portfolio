@@ -62,8 +62,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Email</div>
-                    <a href="mailto:hello@rachit.design" className="hover:text-accent-cyan transition-colors">
-                      hello@rachit.design
+                    <a href="mailto:kushwaharachit80@gmail.com" className="hover:text-accent-cyan transition-colors">
+                      kushwaharachit80@gmail.com
                     </a>
                   </div>
                 </div>
@@ -74,8 +74,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Phone</div>
-                    <a href="tel:+1234567890" className="hover:text-accent-cyan transition-colors">
-                      +1 (234) 567-890
+                    <a href="tel:+919934228515" className="hover:text-accent-cyan transition-colors">
+                      +91 9934228515
                     </a>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400">Location</div>
-                    <span>San Francisco, CA</span>
+                    <span>Meerut, UP, India</span>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6">Follow Me</h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/beyondrachit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center hover:bg-accent-cyan/20 transition-colors"
@@ -104,7 +104,7 @@ const Contact = () => {
                   <Instagram className="w-6 h-6 text-accent-cyan" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/rachit-kushwaha-6a78a3331/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center hover:bg-accent-cyan/20 transition-colors"
@@ -112,7 +112,7 @@ const Contact = () => {
                   <Linkedin className="w-6 h-6 text-accent-cyan" />
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="https://youtube.com/@beyondrachit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-accent-cyan/10 rounded-lg flex items-center justify-center hover:bg-accent-cyan/20 transition-colors"

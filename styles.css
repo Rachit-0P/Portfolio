@@ -14,3 +14,38 @@
 }
 
 /* ...existing code... */
+
+#featured-works {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#featured-works .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#featured-works .gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* ...existing code... */
+
+#services .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#services .gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* ...existing code... */

@@ -16,6 +16,10 @@
   ::selection {
     @apply bg-accent-cyan/30 text-white;
   }
+
+  p {
+    @apply text-gray-300; /* Ensure paragraphs have a lighter text color */
+  }
 }
 
 @layer components {

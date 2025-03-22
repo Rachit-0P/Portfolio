@@ -130,54 +130,36 @@ const About = () => {
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <span>Photoshop</span>
-                <span className="text-accent-cyan">95%</span>
+                <span className="text-accent-cyan">60%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '95%' }} />
+                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '60%' }} />
               </div>
               
               <div className="flex justify-between items-center mt-4">
-                <span>Illustrator</span>
-                <span className="text-accent-cyan">90%</span>
+                <span>Ibis Paint X</span>
+                <span className="text-accent-cyan">80%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '90%' }} />
+                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '80%' }} />
               </div>
               
               <div className="flex justify-between items-center mt-4">
-                <span>Figma</span>
-                <span className="text-accent-cyan">85%</span>
+                <span>CapCut</span>
+                <span className="text-accent-cyan">80%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '85%' }} />
+                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '80%' }} />
+              </div>
+
+              <div className="flex justify-between items-center mt-4">
+                <span>Premiere Pro</span>
+                <span className="text-accent-cyan">60%</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="bg-accent-cyan h-2 rounded-full" style={{ width: '60%' }} />
               </div>
             </div>
-          </motion.div>
-
-          <motion.div variants={itemVariants} className="bg-primary p-6 rounded-xl">
-            <h4 className="text-xl font-bold mb-4">Expertise</h4>
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-accent-cyan rounded-full" />
-                <span>Thumbnail Design</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-accent-cyan rounded-full" />
-                <span>Brand Identity</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-accent-cyan rounded-full" />
-                <span>Social Media Graphics</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-accent-cyan rounded-full" />
-                <span>Motion Graphics</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="w-2 h-2 bg-accent-cyan rounded-full" />
-                <span>Video Editing</span>
-              </li>
-            </ul>
           </motion.div>
 
           <motion.div variants={itemVariants} className="bg-primary p-6 rounded-xl">
@@ -185,18 +167,18 @@ const About = () => {
             <div className="space-y-4">
               <div>
                 <div className="text-accent-cyan font-medium">2023 - Present</div>
-                <div className="font-medium">Freelance Designer</div>
+                <div className="font-medium">Thumbnail Design</div>
                 <div className="text-sm text-gray-400">Working with content creators</div>
               </div>
               <div>
-                <div className="text-accent-cyan font-medium">2022 - 2023</div>
-                <div className="font-medium">Junior Designer</div>
-                <div className="text-sm text-gray-400">Creative Agency XYZ</div>
+                <div className="text-accent-cyan font-medium">2024 - Present</div>
+                <div className="font-medium">Mobicrown</div>
+                <div className="text-sm text-gray-400">Designing posts and posters for mobile battery and glass brand</div>
               </div>
               <div>
-                <div className="text-accent-cyan font-medium">2021 - 2022</div>
-                <div className="font-medium">Design Intern</div>
-                <div className="text-sm text-gray-400">Digital Studio ABC</div>
+                <div className="text-accent-cyan font-medium">2024 - Present</div>
+                <div className="font-medium">Petcast</div>
+                <div className="text-sm text-gray-400">Designing posts and posters for pet shampoo and perfume brand</div>
               </div>
             </div>
           </motion.div>

@@ -69,8 +69,7 @@ const Portfolio = () => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1, y: 0,
       transition: { duration: 0.6 }
     }
   };
@@ -78,20 +77,6 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 px-4 bg-secondary">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          ref={ref}
-          className="text-center mb-12"
-        >
-          <h2 className="section-title">Featured Works</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Explore my collection of eye-catching thumbnails and designs that have helped
-            creators stand out in the digital space.
-          </p>
-        </motion.div>
-
         <motion.div
           variants={containerVariants}
           initial="hidden"
