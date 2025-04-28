@@ -17,6 +17,7 @@ const Footer = () => {
           </div>
           
           <SocialLinks />
+          
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8">
