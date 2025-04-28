@@ -1,27 +1,30 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FeaturedProjects from './components/FeaturedProjects';
+import FeaturedWorks from './components/FeaturedWorks'; // Add this import
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-primary to-primary/95 text-white">
-      <div className="animate-gradient">
-        <Navbar />
-        <Hero />
-        <Portfolio />
-        <FeaturedProjects />
-        <About />
-        <Services />
-        <Contact />
-        <Footer />
+    <ThemeProvider>
+      <div className="min-h-screen">
+        <div className="animate-gradient">
+          <Navbar />
+          <Hero />
+          <Services />
+          <FeaturedWorks />  {/* Add this to show your portfolio works */}
+          <FeaturedProjects />
+          <About />
+          <Contact />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

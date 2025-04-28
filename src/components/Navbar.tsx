@@ -20,30 +20,30 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-heading font-bold text-accent-cyan">
-            Rachit
+          <a href="#" className="text-2xl font-heading font-bold">
+            <span className="text-white">Beyond</span><span className="text-accent-cyan">Rachit</span>
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex space-x-4">
               <a href="#home" className="nav-link">Home</a>
-              <a href="#portfolio" className="nav-link">Portfolio</a>
+              <a href="#featuredprojects" className="nav-link">Portfolio</a>
               <a href="#services" className="nav-link">Services</a>
               <a href="#about" className="nav-link">About</a>
               <a href="#contact" className="nav-link">Contact</a>
             </div>
 
             <div className="flex items-center space-x-4">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+              <a href="https://instagram.com/beyondrachit" target="_blank" rel="noopener noreferrer" 
                  className="text-gray-300 hover:text-accent-cyan transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/rachit-kushwaha-6a78a3331" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-accent-cyan transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://youtube.com/@beyondrachit" target="_blank" rel="noopener noreferrer"
                  className="text-gray-300 hover:text-accent-cyan transition-colors">
                 <Youtube size={20} />
               </a>
@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="md:hidden mt-4">
             <div className="flex flex-col space-y-4">
               <a href="#home" className="nav-link">Home</a>
-              <a href="#portfolio" className="nav-link">Portfolio</a>
+              <a href="#featuredprojects" className="nav-link">Portfolio</a>
               <a href="#services" className="nav-link">Services</a>
               <a href="#about" className="nav-link">About</a>
               <a href="#contact" className="nav-link">Contact</a>

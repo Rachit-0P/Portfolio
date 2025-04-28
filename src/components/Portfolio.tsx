@@ -74,10 +74,10 @@ const Portfolio = () => {
     }
   };
 
-  return (
-    <section id="portfolio" className="py-20 px-4 bg-secondary">
+   {/*return (
+   <section id="portfolio" className="py-20 px-4 bg-secondary">
       <div className="max-w-7xl mx-auto">
-        <motion.div
+         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -110,17 +110,17 @@ const Portfolio = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
+        </motion.div> */}
+ 
         {/* Modal */}
-        {selectedThumbnail && (
+        {/*{selectedThumbnail && (
           <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
             <div className="bg-secondary max-w-4xl w-full rounded-2xl overflow-hidden relative">
               <button
                 onClick={() => setSelectedThumbnail(null)}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white"
               >
-                <ExternalLink size={24} />
+                <ExternalLink size={24} />  
               </button>
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 <div className="space-y-4">
@@ -159,7 +159,7 @@ const Portfolio = () => {
                         </span>
                       ))}
                     </div>
-                  </div>
+                  </div> 
                   <a
                     href={selectedThumbnail.link}
                     target="_blank"
@@ -176,7 +176,7 @@ const Portfolio = () => {
         )}
       </div>
     </section>
-  );
+  );*/}
 };
 
 export default Portfolio;

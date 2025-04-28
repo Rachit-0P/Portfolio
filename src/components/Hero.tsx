@@ -58,7 +58,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <a
-            href="#portfolio"
+            href="#featured-works"
             className="btn-primary inline-flex items-center space-x-2"
           >
             <span>Explore My Work</span>

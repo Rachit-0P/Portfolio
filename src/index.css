@@ -5,99 +5,98 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Dark theme variables only */
+    --color-primary: 8, 8, 8;
+    --color-secondary: 18, 18, 18;
+    --color-text: 255, 255, 255;
+    --color-text-gray: 180, 180, 180;
+    --color-accent-cyan: 0, 191, 255;
+    --color-accent-orange: 30, 144, 255;
+    --color-accent-green: 70, 130, 180;
+    --color-gray-700: 55, 65, 81;
+    --color-gray-400: 156, 163, 175;
+    --color-gray-300: 209, 213, 219;
+  }
+
   html, body {
-    @apply bg-primary text-white font-sans min-h-screen;
+    min-height: 100vh;
+    color: rgb(var(--color-text));
+    background-color: rgb(var(--color-primary));
   }
 
   body {
-    background: radial-gradient(circle at 50% 50%, #121212, #080808);
+    background: radial-gradient(circle at 50% 50%, rgb(var(--color-secondary)), rgb(var(--color-primary)));
   }
 
   ::selection {
-    @apply bg-accent-cyan/30 text-white;
+    @apply bg-accent-cyan/30;
+    color: rgb(var(--color-text));
   }
 
   p {
-    @apply text-gray-300; /* Ensure paragraphs have a lighter text color */
+    color: rgba(var(--color-text-gray));
   }
 }
 
 @layer components {
   .nav-link {
-    @apply px-4 py-2 text-sm font-medium text-gray-300 hover:text-accent-cyan transition-colors relative;
+    @apply px-4 py-2 text-sm font-medium transition-colors relative;
+    color: rgba(var(--color-text-gray));
+  }
+  
+  .nav-link:hover {
+    color: rgb(var(--color-accent-cyan));
   }
   
   .nav-link::after {
     content: '';
-    @apply absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-0.5 bg-accent-cyan transition-all duration-300;
+    @apply absolute left-1/2 -translate-x-1/2 bottom-0 w-0 h-0.5 transition-all duration-300;
+    background-color: rgb(var(--color-accent-cyan));
   }
   
   .nav-link:hover::after {
     @apply w-1/2;
   }
   
+  /* Rest of the CSS updated to use CSS variables */
   .btn-primary {
-    @apply px-6 py-3 bg-accent-cyan text-primary font-semibold rounded-lg 
+    @apply px-6 py-3 font-semibold rounded-lg 
            hover:bg-accent-orange transition-all duration-300 
            transform hover:scale-105 relative;
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3); /* Updated to blue */
+    background-color: rgb(var(--color-accent-cyan));
+    color: rgb(var(--color-primary));
+    box-shadow: 0 0 20px rgba(var(--color-accent-cyan), 0.3);
   }
 
   .btn-primary::before {
     content: '';
     @apply absolute inset-0 rounded-lg;
-    background: linear-gradient(45deg, rgba(0, 191, 255, 0.2), rgba(30, 144, 255, 0.2)); /* Updated to blue */
+    background: linear-gradient(45deg, 
+      rgba(var(--color-accent-cyan), 0.2), 
+      rgba(var(--color-accent-orange), 0.2)
+    );
     filter: blur(15px);
     z-index: -1;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-heading font-bold mb-8 
-           bg-gradient-to-r from-accent-cyan to-accent-green 
-           bg-clip-text text-transparent relative;
+    @apply text-4xl md:text-5xl font-heading font-bold mb-8 relative;
+    background: linear-gradient(to right, 
+      rgb(var(--color-accent-cyan)), 
+      rgb(var(--color-accent-green))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .section-title::after {
     content: '';
-    @apply absolute -bottom-2 left-0 w-20 h-1 bg-accent-cyan;
-    box-shadow: 0 0 20px rgba(0, 191, 255, 0.5); /* Updated to blue */
+    @apply absolute -bottom-2 left-0 w-20 h-1;
+    background-color: rgb(var(--color-accent-cyan));
+    box-shadow: 0 0 20px rgba(var(--color-accent-cyan), 0.5);
   }
-}
-
-.thumbnail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.thumbnail-card {
-  @apply relative overflow-hidden rounded-lg transition-all duration-300;
-  box-shadow: 0 0 30px rgba(0, 191, 255, 0.1); /* Updated to blue */
-}
-
-.thumbnail-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 40px rgba(0, 191, 255, 0.2); /* Updated to blue */
-}
-
-.service-card {
-  @apply bg-secondary/80 backdrop-blur-sm p-6 rounded-xl border border-accent-cyan/20 
-         hover:border-accent-cyan transition-all duration-300 relative;
-  box-shadow: 0 0 30px rgba(0, 191, 255, 0.1); /* Updated to blue */
-}
-
-.service-card:hover {
-  box-shadow: 0 0 40px rgba(0, 191, 255, 0.2); /* Updated to blue */
-}
-
-.service-card::before {
-  content: '';
-  @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
-  background: linear-gradient(45deg, rgba(0, 191, 255, 0.1), rgba(30, 144, 255, 0.1)); /* Updated to blue */
-}
-
-.service-card:hover::before {
-  @apply opacity-100;
 }
 
 /* Smooth scrolling */
@@ -111,15 +110,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-secondary;
+  background-color: rgb(var(--color-secondary));
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-accent-cyan/50 rounded-full;
+  background-color: rgba(var(--color-accent-cyan), 0.5);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-accent-cyan;
+  background-color: rgb(var(--color-accent-cyan));
 }
 
 /* Animations */
@@ -179,7 +178,48 @@ input:focus, textarea:focus, select:focus {
 }
 
 .animate-gradient {
-  background: linear-gradient(45deg, rgba(0, 191, 255, 0.05), rgba(30, 144, 255, 0.05)); /* Updated to blue */
+  background: linear-gradient(45deg, 
+    rgba(var(--color-secondary), 0.6), 
+    rgba(var(--color-primary), 0.6)
+  );
   background-size: 200% 200%;
   animation: gradientBG 15s ease infinite;
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.thumbnail-card {
+  @apply relative overflow-hidden rounded-lg transition-all duration-300;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.1); /* Updated to blue */
+}
+
+.thumbnail-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.2); /* Updated to blue */
+}
+
+.service-card {
+  background-color: rgba(var(--color-secondary), 0.8);
+  backdrop-filter: blur(2px);
+  @apply p-6 rounded-xl border border-accent-cyan/20 
+         hover:border-accent-cyan transition-all duration-300 relative;
+  box-shadow: 0 0 30px rgba(0, 191, 255, 0.1); /* Updated to blue */
+}
+
+.service-card:hover {
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.2); /* Updated to blue */
+}
+
+.service-card::before {
+  content: '';
+  @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
+  background: linear-gradient(45deg, rgba(0, 191, 255, 0.1), rgba(30, 144, 255, 0.1)); /* Updated to blue */
+}
+
+.service-card:hover::before {
+  @apply opacity-100;
 }

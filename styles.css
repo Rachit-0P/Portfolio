@@ -1,19 +1,12 @@
-/* ...existing code... */
+/* Blue theme styling */
 
-/* Remove existing red or green gradients */
 .heading {
-    /* ...existing code... */
     background: linear-gradient(to right, #0000FF, #00FFFF); /* Blue gradient */
-    /* ...existing code... */
 }
 
 .text {
-    /* ...existing code... */
     background: linear-gradient(to right, #0000FF, #00FFFF); /* Blue gradient */
-    /* ...existing code... */
 }
-
-/* ...existing code... */
 
 #featured-works {
     padding: 50px 0;
@@ -24,28 +17,31 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #featured-works .gallery img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* ...existing code... */
+#featured-works .gallery img:hover {
+    transform: scale(1.05);
+}
 
 #services .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #services .gallery img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius: 8px;
 }
-
-/* ...existing code... */

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Palette, Coffee, Sparkles } from 'lucide-react'; // Remove Youtube import
+import { Code2, Palette, Coffee, Sparkles } from 'lucide-react';
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -40,92 +40,68 @@ const About = () => {
           ref={ref}
           className="text-center mb-16"
         >
-          <h2 className="section-title">About Me</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Passionate about creating visuals that capture attention and drive engagement.
-          </p>
+          <div className="w-full flex flex-col items-center justify-center text-center px-4">
+            <h2 className="text-5xl font-bold text-accent-cyan mb-4">About Me</h2>
+            <div className="max-w-4xl w-full">
+              <h3 className="text-2xl font-bold mb-2">Hi, I'm Rachit</h3>
+              <p className="mb-8 text-gray-300">
+                A passionate graphic designer specializing in YouTube thumbnails and branding. With over a year of experience, I've helped content creators stand out and increase their engagement through compelling visual design.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-primary p-6 rounded-lg">
+                  <div className="text-accent-cyan font-bold text-3xl mb-2">50+</div>
+                  <div className="text-gray-400">Happy Clients</div>
+                </div>
+                <div className="bg-primary p-6 rounded-lg">
+                  <div className="text-accent-cyan font-bold text-3xl mb-2">200+</div>
+                  <div className="text-gray-400">Projects Completed</div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold mb-4">What I Love</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
+                  <div className="flex items-center space-x-3">
+                    <Code2 className="w-5 h-5 text-accent-cyan" />
+                    <span>Clean Design</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Palette className="w-5 h-5 text-accent-cyan" />
+                    <span>Creative Work</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Coffee className="w-5 h-5 text-accent-cyan" />
+                    <span>Coffee & Design</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Sparkles className="w-5 h-5 text-accent-cyan" />
+                    <span>Making Magic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          {/* Removed image section */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
-            className="relative"
+            className="space-y-6 md:col-span-2"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
-                alt="Rachit working"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-accent-cyan/10 backdrop-blur-sm rounded-2xl p-6 border border-accent-cyan/20">
-              <div className="flex items-center space-x-4">
-                <div className="w-3 h-3 bg-accent-cyan rounded-full animate-pulse" />
-                <span className="text-accent-cyan font-medium">Available for freelance</span>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            className="space-y-6"
-          >
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-2xl font-bold">Hi, I'm Rachit</h3>
-              <p className="text-gray-300">
-                A passionate graphic designer specializing in YouTube thumbnails and branding. 
-                With over a year of experience, I've helped content creators stand out and 
-                increase their engagement through compelling visual design.
-              </p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="grid grid-cols-2 gap-4">
-              <div className="bg-primary p-4 rounded-lg">
-                <div className="text-accent-cyan font-bold text-3xl mb-2">50+</div>
-                <div className="text-gray-400">Happy Clients</div>
-              </div>
-              <div className="bg-primary p-4 rounded-lg">
-                <div className="text-accent-cyan font-bold text-3xl mb-2">200+</div> {/* Fixed the unclosed tag */}
-                <div className="text-gray-400">Projects Completed</div>
-              </div>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h4 className="text-xl font-bold">What I Love</h4>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center space-x-3">
-                  <Code2 className="w-5 h-5 text-accent-cyan" />
-                  <span>Clean Design</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Palette className="w-5 h-5 text-accent-cyan" />
-                  <span>Creative Work</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Coffee className="w-5 h-5 text-accent-cyan" />
-                  <span>Coffee & Design</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Sparkles className="w-5 h-5 text-accent-cyan" />
-                  <span>Making Magic</span>
-                </div>
-              </div>
-            </motion.div>
+            
           </motion.div>
         </div>
 
-        {/* Skills Section */}
+        {/* Skills Section - Updated to center align horizontally */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-3 gap-8"
+          className="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto"
         >
-          <motion.div variants={itemVariants} className="bg-primary p-6 rounded-xl">
+          <motion.div variants={itemVariants} className="bg-primary p-6 rounded-xl md:w-1/2">
             <h4 className="text-xl font-bold mb-4">Design Tools</h4>
             <div className="space-y-2">
               <div className="flex justify-between items-center">
@@ -162,7 +138,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="bg-primary p-6 rounded-xl">
+          <motion.div variants={itemVariants} className="bg-primary p-6 rounded-xl md:w-1/2">
             <h4 className="text-xl font-bold mb-4">Experience</h4>
             <div className="space-y-4">
               <div>
